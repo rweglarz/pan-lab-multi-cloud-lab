@@ -149,6 +149,7 @@ data "google_compute_subnetwork" "untrust" {
 module "iam_service_account" {
   source             = "PaloAltoNetworks/vmseries-modules/google//modules/iam_service_account"
   service_account_id = "${local.prefix}sa"
+  project_id            = var.project_id
 }
 
 
